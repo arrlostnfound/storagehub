@@ -1,0 +1,17 @@
+body{
+    margin:0px;
+    padding: 0px;    
+}
+
+#header{
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 9px 0 0;
+    height: 60px;
+    left: 0;
+    overflow: visible;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+}
