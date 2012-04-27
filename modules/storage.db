@@ -1,0 +1,3 @@
+ create table storage_user(user_id INTEGER PRIMARY KEY NOT NULL, username varchar(30) NOT NULL, emailid varchar(30) NOT NULL,
+ password varchar(30) NOT NULL,Activation varchar(40) DEFAULT NULL,
+ status BOOLEAN, last_login DATE, created_date DATE);

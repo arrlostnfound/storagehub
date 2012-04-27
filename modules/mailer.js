@@ -1,24 +1,24 @@
-var nodemailer = require('nodemailer');
+var mail = require('nodemailer');
 
-nodemailer.SMTP = {
+// one time action to set up SMTP information
+mail.SMTP = {
     host: 'smtp.gmail.com',
     port: 465,
     use_authentication: true,
     ssl: true,
-    user: 'anandchitravelu@gmail.com',
-    pass: 'bookklix@)!@',
+    user: 'mailtoramanand@gmail.com',
+    pass: 'ram1986swap',
     debug: true
 }
 
-exports.mailme = function(sender,to,subject,html,body){
-    nodemailer.send_mail({
-        sender: sender,
-        to: to,
+//Mail Sender Method
+exports.sendmail = function (sendermail,tomail,subject,content) {
+    mail.send_mail({
+        sender: sendermail,
+        to: tomail,
         subject:subject,
-        html: html,
-        body:body
-    },function(error, success){
+        html: content},function(error, success){
         console.log('Message ' + success ? 'sent' : 'failed');
     });
-}
+};
 

@@ -1,6 +1,9 @@
 var express = require('express');
 var db = require('./modules/db');
 var mail = require('./modules/mailer');
+var random = require('./modules/random');
+var mypassword = random.random();
+
 var Hashes = require('jshashes');
 var fs = require('fs');
 var serverlog = fs.createWriteStream('./server.log', {flags: 'a'});
@@ -31,14 +34,26 @@ app.get('/register', function(req,res){
     res.render('register');
 });
 
+app.get('/confirmation', function(req,res){
+    res.render('confirm');
+});
+
 app.post('/addme', function(req,res){
     var username = req.body.username;
     var email = req.body.email;
-    var password = MD5(req.body.password);
+    var password = req.body.password;
     var status = 0;
     var createddate = new Date();
-    console.log(username);
-    db.CreateUser(username,email,password,status,createddate);
+    var activation = random.random();
+    db.CreateUser(username,email,password,activation,status,createddate);
+    var content  = 'http://127.0.0.1:3000/confirmation and activation code is '.activation;
+    mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation','');
+});
+
+app.post('/confirmme', function(req,res){
+    var email = req.body.email;
+    var code = req.body.code;
+    db.activateuser(email,code);
 });
 
 
