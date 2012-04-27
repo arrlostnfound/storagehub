@@ -32,8 +32,7 @@ exports.CreateUser = function(username,emailid,password,activation,status,create
 
 exports.activateuser = function(email,code){
     client.query(
-        'SELECT username FROM '+USER_TABLE+' '+
-        'WHERE emailid = '+email+' & '+'Activation= '+code,
+        'SELECT username FROM '+USER_TABLE+'WHERE emailid = '+email+' & '+'Activation= '+code,
         function selectCb(err, results, fields) {
             if (err) {
                 throw err;

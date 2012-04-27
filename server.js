@@ -46,8 +46,8 @@ app.post('/addme', function(req,res){
     var createddate = new Date();
     var activation = random.random();
     db.CreateUser(username,email,password,activation,status,createddate);
-    var content  = 'http://127.0.0.1:3000/confirmation and activation code is '.activation;
-    mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation','');
+    //var content  = 'http://127.0.0.1:3000/confirmation and activation code is '.activation;
+    mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation',activation);
 });
 
 app.post('/confirmme', function(req,res){
