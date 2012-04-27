@@ -139,11 +139,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #000;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #666;
   text-decoration: underline;
 }
 .row {
@@ -619,7 +619,7 @@ select,
 .uneditable-input {
   display: inline-block;
   width: 210px;
-  height: 18px;
+  height: 25px;
   padding: 4px;
   margin-bottom: 9px;
   font-size: 13px;
@@ -2592,7 +2592,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #000;
 }
 .nav-stacked > li {
   float: none;

@@ -41,19 +41,22 @@ app.get('/confirmation', function(req,res){
 app.post('/addme', function(req,res){
     var username = req.body.username;
     var email = req.body.email;
-    var password = req.body.password;
+    var password = MD5.hex(req.body.password);
     var status = 0;
     var createddate = new Date();
     var activation = random.random();
     db.CreateUser(username,email,password,activation,status,createddate);
-    //var content  = 'http://127.0.0.1:3000/confirmation and activation code is '.activation;
-    mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation',activation);
+    var content  = 'http://10.10.27.18:3000/confirmation and activation code is : ' +activation;
+    mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation',content);
+    res.render('confirmemail');
 });
 
 app.post('/confirmme', function(req,res){
     var email = req.body.email;
     var code = req.body.code;
-    db.activateuser(email,code);
+    db.ActivateUser(email,code);
+    res.render('success');
+    //mail.sendmail("ramanand.chitravelu@csscorp.com",email,'Activation',activation);
 });
 
 

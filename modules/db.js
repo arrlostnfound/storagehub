@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var TEST_DATABASE = 'nodetest';
 
 //Tables
-var USER_TABLE = 'storage_user';
+var USER_TABLE = 'user_table';
 var ACCOUNT_TABLE = 'account_table';
 var CLOUD_TABLE = 'cloud_table';
 
@@ -30,16 +30,12 @@ exports.CreateUser = function(username,emailid,password,activation,status,create
     
 }
 
-exports.activateuser = function(email,code){
+exports.ActivateUser = function(email,code){
     client.query(
-        'SELECT username FROM '+USER_TABLE+'WHERE emailid = '+email+' & '+'Activation= '+code,
-        function selectCb(err, results, fields) {
-            if (err) {
-                throw err;
-            }
-            console.log(results);
-            console.log(fields);
-            client.end();
-        }
+        'UPDATE '+USER_TABLE+' set status = 1 WHERE emailid = "'+email+'" and '+' Activation = "'+code+'"'
     );
+}
+
+exports.UserLogin = function(email,password){
+    
 }
