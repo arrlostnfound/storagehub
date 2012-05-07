@@ -6,8 +6,8 @@ mail.SMTP = {
     port: 465,
     use_authentication: true,
     ssl: true,
-    user: 'mailtoramanand@gmail.com',
-    pass: 'ram1986swap',
+    user: 'arrlostnfound@gmail.com',
+    pass: 'grindfun&&',
     debug: true
 }
 
