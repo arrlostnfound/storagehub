@@ -1,7 +1,24 @@
-<form class="well" action="/confirmme" method="post">
-  <label>code</label>
-  <input type="text" name="code" class="span3" placeholder="Username">
-  <label>Emailid</label>
-  <input type="text" name="email" class="span3" placeholder="Email">
-  <button type="submit" class="btn">Submit</button>
-</form>
+<div id="registeradmin">
+               
+                <form class="formregister" action="/confirmme" method="post">
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Username">Email:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" size="30" name="emailid" id="emailid" class="span4">
+                    </div>
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Password">Code:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" size="30" name="code" id="code" class="span4">
+                    </div>
+               
+                    <div style="float:right;">
+                        <input type="submit" size="30" value="Confirm" class="btn btn-primary">
+                    </div>
+                </form>
+ <p id="nav">
+                    <a href="/resendcode">Resend Confirmation Code</a> 
+                </p>
+            </div>

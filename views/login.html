@@ -1,8 +1,24 @@
-<form class="well form-inline">
-  <input type="text" class="input-small" placeholder="Email">
-  <input type="password" class="input-small" placeholder="Password">
-  <label class="checkbox">
-    <input type="checkbox"> Remember me
-  </label>
-  <button type="submit" class="btn">Sign in</button>
-</form>
+<div id="login">
+                
+                <form id="formlogin" action="/logmein" method="POST">
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Username">Username:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" size="30" name="username" id="username" class="span4">
+                    </div>
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Password">Password:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="password" size="30" name="password" id="password" class="span4">
+                    </div>
+                    <div style="float:right;">
+                        <input type="submit" size="30" value="Login" class="btn btn-primary">
+                    </div>
+                </form>
+             <p id="nav">
+                    <a href="/register">Register</a> |
+                    <a title="Password Lost and Found" href="#">Lost your password?</a>
+                </p>
+            </div>

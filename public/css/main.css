@@ -1,12 +1,4 @@
-body{
-    margin:0px;
-    padding: 0px;    
-}
-
-#header{
-    background-color: #F8F8F8;
-    border-bottom: 1px solid #E0E0E0;
-    padding: 9px 0 0;
+#top-bar{
     height: 60px;
     left: 0;
     overflow: visible;
@@ -14,29 +6,128 @@ body{
     right: 0;
     top: 0;
     z-index: 10000;
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 9px 0 0;
 }
 
-.logo{
-    font-size: 25px;
-    color: #000;
-    padding-top: 15px;
+#logo{
     float: left;
 }
 
-.menu{
-    padding-top: 10px;
+#menu{
     float: right;
+    padding-top: 5px;
 }
 
-#content{
-    margin-top: 85px;
-    height: 350px;
-    background-color: #fefefe;
-    border: 1px solid #dedede;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    padding: 10px;
-    width: 920px!important;
+/*Banner*/
+#banner{
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-bottom: 1px solid #E1E1E1;
+    border-top: 3px solid #EBEBEB;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    padding: 30px 0 31px;
 }
 
+#banner{
+    padding-bottom: 0;
+}
+
+#banner-content{
+    text-align: center;
+}
+
+#banner-content h2{
+    font-size: 40px;
+}
+
+.big-media {
+    margin-top: 20px;
+}
+
+/*Content*/
+.heading{
+    font-size: 30px;
+}
+
+.btn.huge {
+    border-radius: 6px 6px 6px 6px;
+    font-size: 18px;
+    line-height: normal;
+    padding: 15px 18px;    
+}
+
+.row {
+    margin-left: -20px;
+}
+
+p{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.well {
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+
+blockquote.big-quote {
+    background: url("/images/big-quote-bg.png") no-repeat scroll 0 0 transparent;
+    border-left: medium none;
+    padding-left: 90px;
+}
+
+#free{
+    text-align: center;
+}
+
+#nav{
+    padding-left: 10px;
+}
+
+footer {
+    background: none repeat scroll 0 0 #252525;
+    border-top: 0 none;
+    border-top: 1px solid #EEEEEE;
+    padding-top: 19px;
+    width: 100%;
+    color: #fff;
+}
+
+#login {
+    margin: 14em auto;
+    width: 320px;
+}
+
+#formlogin {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 4px 10px -1px rgba(200, 200, 200, 0.698);
+    font-weight: normal;
+    margin-left: 8px;
+    padding: 26px 24px 46px;
+}
+
+#registeradmin{
+    margin: 11em auto;
+    width: 320px;
+}
+
+.formregister {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 4px 10px -1px rgba(200, 200, 200, 0.698);
+    font-weight: normal;
+    margin-left: 8px;
+    padding: 26px 24px 46px;
+}

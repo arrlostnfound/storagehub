@@ -1,9 +1,29 @@
-<form class="well" action="/addme" method="post">
-  <label>User Name</label>
-  <input type="text" name="username" class="span3" placeholder="Username">
-  <label>Emailid</label>
-  <input type="text" name="email" class="span3" placeholder="Email">
-  <label>Password</label>
-  <input type="password" name="password" class="span3" placeholder="Password">
-  <button type="submit" class="btn">Submit</button>
-</form>
+<div id="registeradmin">
+               
+                <form class="formregister" action="/addme" method="post">
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Username">Username:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" size="30" name="username" id="username" class="span4">
+                    </div>
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Password">Password:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="password" size="30" name="password" id="password" class="span4">
+                    </div>
+                    <div class="clearfix" style="text-align:left;">
+                        <label for="Email">Email:</label>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" size="30" name="email" id="email" class="span4">
+                    </div>
+                    <div style="float:right;">
+                        <input type="submit" size="30" value="Register" class="btn btn-primary">
+                    </div>
+                </form>
+ <p id="nav">
+                    <a href="/login">Have account Login</a> 
+                </p>
+            </div>

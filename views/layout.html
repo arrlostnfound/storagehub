@@ -1,32 +1,41 @@
 <!DOCTYPE>
     <html>
 	<head>
-	    <title>Nodejs</title>
+	    <title>My Storage Hub</title>
 	    <link rel="stylesheet" href="/css/main.css">
 	    <link rel="stylesheet" href="/css/bootstrap.css">
 	    <!--<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">-->
 	</head>
 	<body>
-	    <div id="wrapper">
-		<!-- Header -->
-		<div id="header">
-		    <div class="container">
-			<div class="logo">
-			    <a href="/">NODE.JS</a>
-			</div>
-			<div class="menu">
-			    <ul class="nav nav-pills">
-				<li class="active"><a href="/">Home</a></li>
-				<li><a href="#">Why?</a></li>
-				<li><a href="#">Help</a></li>
-				<li><a href="/login">Login</a></li>
-			    </ul>
-			</div>
-		    </div>
-		</div>
-	    </div>
-	    <div class="container" id="content">
+	    <header id="top-bar">
+                <div class="container">
+                    <div id="logo">
+                        <img src="/images/logo.png" width="140px" height="50px" title="Mystoragehub"/>
+                    </div>
+                    <div id="menu">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="/login" class="btn btn-success">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+           
 	    {{html body}}
-	    </div>
+	    
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="span8">
+                            <h3 id="phone">1-800-975-5304</h3>
+                            <p>&copy; 2012 HubSteps LLC, All Rights Reserved.  </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 	</body>
     </html>
